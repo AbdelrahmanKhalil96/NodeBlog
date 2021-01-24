@@ -39,7 +39,7 @@ class ImageUpload extends React.Component {
 
         axios.post('https://api.imgur.com/3/image'
             , data, options).then(res => {
-                console.log(res.data.data.link);
+                //        console.log(res.data.data.link);
                 this.setState({ uploadPercentage: 100 }, () => {
                     setTimeout(() => {
                         this.setState({ uploadPercentage: 0 })

@@ -5,6 +5,7 @@ import Posts from './posts'
 import ReactModal from 'react-modal';
 //import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
+import Slider from './slider'
 
 /*
 const customStyles = {
@@ -58,7 +59,7 @@ class Home extends React.Component {
                         }.bind(this), 2000);
                     }
                     let posts = res.data
-                    console.log(posts);
+                    //       console.log(posts);
                 });
         }
         else {
@@ -84,7 +85,7 @@ class Home extends React.Component {
         })
             .then((res) => {
                 let posts = res.data.posts
-                console.log(posts);
+                //     console.log(posts);
                 this.setState({ posts, fullyLoaded: true })
 
             });
@@ -122,15 +123,16 @@ class Home extends React.Component {
         })
             .then((res) => {
                 let posts = res.data.posts
-                console.log(posts);
+                //       console.log(posts);
                 this.setState({ posts, fullyLoaded: true })
 
             });
     }
     render() {
-        console.log(this.props)
+        //  console.log(this.props)
         return (
             <div id='homeDiv'>
+                <Slider />
                 {
                     this.state.fullyLoaded ?
                         <div className="container" >

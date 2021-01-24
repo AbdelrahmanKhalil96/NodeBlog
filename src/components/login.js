@@ -5,7 +5,7 @@ import axios from "axios";
 class Login extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
+        //    console.log(props);
     }
     state = {
         fields: {},
@@ -40,7 +40,7 @@ class Login extends Component {
             }
         })
             .then((res) => {
-                console.log(res.data);
+                //        console.log(res.data);
                 self.setState({
                     Logged_in: res.data['Logged_in']
                 });
@@ -81,7 +81,7 @@ class Login extends Component {
         else if (typeof fields["password"] !== "undefined") {
             delete errors.password;
             if (Object.entries(errors).length === 0 && errors.constructor === Object) {
-                console.log("emptyAfterpassword");
+                //     console.log("emptyAfterpassword");
 
                 formIsValid = true;
             }
@@ -120,7 +120,7 @@ class Login extends Component {
             else {
                 delete errors.email;
                 if (Object.entries(errors).length === 0 && errors.constructor === Object) {
-                    console.log("empty");
+                    //    console.log("empty");
                     formIsValid = true;
                 }
             }

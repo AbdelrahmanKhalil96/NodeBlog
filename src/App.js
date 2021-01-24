@@ -113,11 +113,11 @@ class App extends Component {
             <Route path="/logout" render={(props) => <Logout axiosUrl={axiosUrl} handleLogoutCheck={this.handleLogoutCheck.bind(this)} {...props} />} />
             <Route path="/user/:user_id" render={(props) => <UserProfile axiosUrl={axiosUrl}  {...props} />} /></Switch>
         </BrowserRouter>
-        {isLoggedIn === "true" &&
+        {/* {isLoggedIn === "true" &&
           <Chat
             handleNewUserMessage={this.handleNewUserMessage}
           />
-        }
+        } */}
         {/* <ImageUpload />*/}
       </div>
     );

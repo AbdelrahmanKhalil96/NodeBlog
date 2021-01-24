@@ -4,7 +4,7 @@ import axios from "axios";
 class UserProfile extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
+        //   console.log(props);
         this.state = {
             fetchedData: {
                 UEmail: '',
@@ -35,7 +35,7 @@ class UserProfile extends Component {
                 this.setState({
                     fetchedData: res.data
                 })
-                console.log(posts);
+                //     console.log(posts);
             });
     }
 
@@ -49,61 +49,63 @@ class UserProfile extends Component {
                 <div>
 
                     <div className="container ">
-                        <div className="row">
-                            <div className="col-sm-10"><h1>User Profile Page</h1></div>
-                        </div>
-                        <div className="row">
-                            <div className="col-sm-3">{/*left col*/}
-                                <div className="text-center">
-                                    <img src={this.state.fetchedData['uImg']} className="avatar img-circle img-thumbnail" alt='Please Wait' />
+                        <div className="wrapper">
+                            <div className="row">
+                                <div className="col-sm-10"><h1>User Profile Page</h1></div>
+                            </div>
+                            <div className="row">
+                                <div className="col-sm-3">{/*left col*/}
+                                    <div className="text-center">
+                                        <img src={this.state.fetchedData['uImg']} className="avatar img-circle img-thumbnail" alt='Please Wait' />
 
-                                </div><br />
+                                    </div><br />
 
-                            </div>{/*/col-3*/}
+                                </div>{/*/col-3*/}
 
-                            <div className="col-md-9">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <div className="row">
-                                            <div className="col-md-12">
-                                                <h4>User Profile</h4>
-                                                <hr />
+                                <div className="col-md-9">
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <div className="row">
+                                                <div className="col-md-12">
+                                                    <h4>User Profile</h4>
+                                                    <hr />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-md-12">
-                                                <form id='chForm' >
-                                                    <div className="form-group row">
-                                                        <label htmlFor="email" className="col-4 col-form-label">Email</label>
-                                                        <div className="col-8">
-                                                            <input id="email" className="form-control here" type="text" value={this.state.fetchedData['UEmail']} disabled />
+                                            <div className="row">
+                                                <div className="col-md-12">
+                                                    <form id='chForm' >
+                                                        <div className="form-group row">
+                                                            <label htmlFor="email" className="col-4 col-form-label">Email</label>
+                                                            <div className="col-8">
+                                                                <input id="email" className="form-control here" type="text" value={this.state.fetchedData['UEmail']} disabled />
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className="form-group row">
-                                                        <label htmlFor="name" className="col-4 col-form-label">Full Name</label>
-                                                        <div className="col-8">
-                                                            <input id="name" name="name" placeholder="Full Name" className="form-control here" type="text" value={this.state.fetchedData['UName']} disabled />
+                                                        <div className="form-group row">
+                                                            <label htmlFor="name" className="col-4 col-form-label">Full Name</label>
+                                                            <div className="col-8">
+                                                                <input id="name" name="name" placeholder="Full Name" className="form-control here" type="text" value={this.state.fetchedData['UName']} disabled />
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div className="form-group row">
-                                                        <label htmlFor="phone" className="col-4 col-form-label">Phone No.</label>
-                                                        <div className="col-8">
-                                                            <input id="phone" name="phone" placeholder="phone" className="form-control here" value={this.state.fetchedData['UPhone']} type="text" disabled />
+                                                        <div className="form-group row">
+                                                            <label htmlFor="phone" className="col-4 col-form-label">Phone No.</label>
+                                                            <div className="col-8">
+                                                                <input id="phone" name="phone" placeholder="phone" className="form-control here" value={this.state.fetchedData['UPhone']} type="text" disabled />
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div className="form-group row">
+                                                        <div className="form-group row">
 
-                                                    </div>
-                                                </form>
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>{/*/col-9*/}
-                    </div>{/*/row*/}
+                            </div>{/*/col-9*/}
+                        </div>{/*/row*/}
+                    </div>
                 </div>
             </div >
         )

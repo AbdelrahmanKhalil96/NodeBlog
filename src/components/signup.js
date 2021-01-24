@@ -68,7 +68,7 @@ class SignUp extends Component {
             else {
                 delete errors.email;
                 if (Object.entries(errors).length === 0 && errors.constructor === Object) {
-                    console.log("empty");
+                    //    console.log("empty");
 
                     formIsValid = true;
                 }
@@ -99,7 +99,7 @@ class SignUp extends Component {
         else if (typeof fields["name"] !== "undefined") {
             delete errors.name;
             if (Object.entries(errors).length === 0 && errors.constructor === Object) {
-                console.log("emptyAfterUserName");
+                //  console.log("emptyAfterUserName");
 
                 formIsValid = true;
             }
@@ -126,7 +126,7 @@ class SignUp extends Component {
                 if (errors["password"]) {
                     delete errors.password;
                     if (Object.entries(errors).length === 0 && errors.constructor === Object) {
-                        console.log("empty");
+                        //        console.log("empty");
                         fields["password"] = e.target.value;
 
                         formIsValid = true;
@@ -176,7 +176,7 @@ class SignUp extends Component {
         })
             .then((res) => {
                 //console.log((document.cookie = "Login_is:" + res.data.token));
-                console.log(res);
+                //     console.log(res);
                 if (res.data['Register'] !== 'Successfully') {
                     errors["failed"] = res.data['Register'];
                     this.setState({

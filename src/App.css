@@ -53,3 +53,26 @@
     transform: rotate(360deg);
   }
 }
+.navContainer {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  border: #333333;
+  opacity: 70%;
+}
+.carousel-item img {
+  max-height: 400px;
+
+  width: auto;
+}
+
+.active {
+  font-size: large;
+}
+.nav-item {
+  /*border: 1px solid rgb(63, 62, 62);*/
+  /*background-color: #858383;*/
+}
+.nav-link {
+  color: #fff;
+}
